@@ -7,15 +7,16 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    int quantity = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    public void icreaseQuantity(View view) {
+    public void increaseQuantity(View view) {
+        quantity = quantity + 1;
         TextView quantityTextView = findViewById(R.id.quantityTextView);
-        quantityTextView.setText("1");
+        quantityTextView.setText("" + quantity);
     }
 }
