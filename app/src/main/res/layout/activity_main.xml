@@ -103,6 +103,7 @@
 
         <Button
             android:id="@+id/minusButton"
+            android:onClick="decreaseQuantity"
             android:layout_toRightOf="@id/price"
             android:layout_below="@id/Quantity"
             android:textColor="@android:color/white"
