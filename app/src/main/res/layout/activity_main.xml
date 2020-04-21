@@ -57,11 +57,12 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:src="@drawable/guitar"
+        android:id="@+id/goodsImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:layout_gravity="center_horizontal" />
+        android:src="@drawable/guitar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
