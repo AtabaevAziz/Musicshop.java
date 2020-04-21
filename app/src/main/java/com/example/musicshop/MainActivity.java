@@ -75,12 +75,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView priceTextView = findViewById(R.id.price);
         priceTextView.setText("" + quantity*price);
         ImageView goodsImageView = findViewById(R.id.goodsImageView);
-        if (goodsName.equals("Guitar")) {
-            goodsImageView.setImageResource(R.drawable.guitar);
-        } else if (goodsName.equals("Drums")) {
-            goodsImageView.setImageResource(R.drawable.drums);
-        } else {
-            goodsImageView.setImageResource(R.drawable.keyboard);
+        switch (goodsName) {
+            case "Drums":
+                goodsImageView.setImageResource(R.drawable.drums);
+                break;
+            case "Keyboard":
+                goodsImageView.setImageResource(R.drawable.keyboard);
+                break;
+            default:
+                goodsImageView.setImageResource(R.drawable.guitar);
+                break;
         }
 
 

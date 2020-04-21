@@ -119,11 +119,12 @@
         <Button
             android:id="@+id/minusButton"
             android:onClick="decreaseQuantity"
+            android:layout_alignParentStart="true"
             android:layout_toRightOf="@id/price"
             android:layout_below="@id/Quantity"
             android:textColor="@android:color/white"
             android:text="-"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="200dp"
             android:layout_marginTop="5dp"
             android:background="#B30000"
             android:layout_width="50dp"
