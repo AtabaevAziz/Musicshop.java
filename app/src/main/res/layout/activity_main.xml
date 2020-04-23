@@ -161,11 +161,12 @@
 
     <Button
         android:text="Add To Cart"
+        android:onClick="addToCart"
         android:textColor="@android:color/white"
         android:background="#B30000"
         android:layout_marginTop="-150dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

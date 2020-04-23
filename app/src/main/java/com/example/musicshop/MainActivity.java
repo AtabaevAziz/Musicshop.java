@@ -3,9 +3,11 @@ package com.example.musicshop;
 //import androidx.appcompat.app.AppCompatActivity;
 //import androidx.appcompat.widget.MenuPopupWindow;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String goodsName;
     double price;
 
+    EditText userNameTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         createSpinner();
 
         createMap();
+        userNameTextView = findViewById(R.id.editText);
 
     }
 
@@ -100,6 +105,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+    public void addToCart(View view) {
+        Order order = new Order();
+        order.userName = userNameTextView.getText().toString();
+        order.quantity = quantity;
+        order.goodsName = goodsName;
+        order.orderPrice = quantity * price;
+        Log.d("order", "" + order.orderPrice);
 
     }
 }
