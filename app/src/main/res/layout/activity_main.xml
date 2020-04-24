@@ -81,28 +81,28 @@
 
         <TextView
             android:id="@+id/price"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/OrderPrice"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
-            android:text="0.0"
+            android:text="0.0 $"
             android:textColor="@android:color/black"
             android:textSize="22sp"
             android:textStyle="bold" />
 
-        <TextView
+ <!--       <TextView
             android:id="@+id/currency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/OrderPrice"
-            android:layout_toRightOf="@id/price"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="-90dp"
             android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/price"
             android:text="$"
             android:textColor="@android:color/black"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold" /> -->
 
         <TextView
             android:id="@+id/Quantity"
@@ -110,8 +110,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:text="Quantity"
-            android:layout_toRightOf="@id/price"
-            android:layout_marginStart="170dp"
+            android:layout_toRightOf="@id/OrderPrice"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -132,29 +132,29 @@
 
         <TextView
             android:id="@+id/quantityTextView"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/OrderPrice"
-            android:layout_toRightOf="@id/minusButton"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:textSize="22sp"
-            android:text="0"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_toRightOf="@id/minusButton"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/plusButton"
-            android:onClick="increaseQuantity"
-            android:layout_toRightOf="@id/quantityTextView"
-            android:layout_below="@id/Quantity"
-            android:textColor="@android:color/white"
-            android:text="+"
-            android:layout_marginStart="19dp"
-            android:layout_marginTop="5dp"
-            android:background="#B30000"
             android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:layout_below="@id/Quantity"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/quantityTextView"
+            android:background="#B30000"
+            android:onClick="increaseQuantity"
+            android:text="+"
+            android:textColor="@android:color/white" />
 
 
     </RelativeLayout>

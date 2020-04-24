@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView quantityTextView = findViewById(R.id.quantityTextView);
         quantityTextView.setText("" + quantity);
         TextView priceTextView = findViewById(R.id.price);
-        priceTextView.setText("" + quantity*price);
+        priceTextView.setText(String.format("%.2f", quantity*price) + " $");
 
     }
 
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView quantityTextView = findViewById((R.id.quantityTextView));
         quantityTextView.setText("" + quantity);
         TextView priceTextView = findViewById(R.id.price);
-        priceTextView.setText("" + quantity*price);
+        priceTextView.setText(String.format("%.2f", quantity*price) + " $");
     }
 
     @Override
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         goodsName = spinner.getSelectedItem().toString();
         price = (double)goodsMap.get(goodsName);
         TextView priceTextView = findViewById(R.id.price);
-        priceTextView.setText("" + quantity*price);
+        priceTextView.setText(String.format("%.2f", quantity*price) + " $");
         ImageView goodsImageView = findViewById(R.id.goodsImageView);
         switch (goodsName) {
             case "Drums":
