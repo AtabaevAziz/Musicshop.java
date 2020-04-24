@@ -2,6 +2,7 @@ package com.example.musicshop;
 
 //import androidx.appcompat.app.AppCompatActivity;
 //import androidx.appcompat.widget.MenuPopupWindow;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -114,7 +115,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         order.quantity = quantity;
         order.goodsName = goodsName;
         order.orderPrice = quantity * price;
-        Log.d("order", "" + order.orderPrice);
+        //Log.d("order", "" + order.orderPrice);
+        Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        orderIntent.putExtra("userName",order.userName);
+        orderIntent.putExtra("quantity",order.quantity);
+        orderIntent.putExtra("goodsName",order.goodsName);
+        orderIntent.putExtra("orderPrice",order.orderPrice);
 
+        startActivity(orderIntent);
     }
 }
