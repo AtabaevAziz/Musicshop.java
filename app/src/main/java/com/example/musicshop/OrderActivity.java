@@ -23,6 +23,10 @@ public class OrderActivity extends AppCompatActivity {
         String goodsName = reciverdOrderIntent.getStringExtra("goodsName");
         TextView orderTextView = findViewById(R.id.orderUserName);
 
-        orderTextView.setText(userName + "\n" + goodsName + "\n" + quantity + "\n" + price + "\n" + orderPrice);
+        orderTextView.setText("Customer's Name: " + userName
+                + "\n" + "Subject: " + goodsName
+                + "\n" + "Quantity: " + quantity
+                + "\n" + "Price: " + price
+                + "\n" + "Order Price: " + orderPrice);
     }
 }
