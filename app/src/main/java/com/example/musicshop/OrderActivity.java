@@ -12,13 +12,17 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        setTitle("ADD TO CART");
+
         Intent reciverdOrderIntent = getIntent();
         String userName = reciverdOrderIntent.getStringExtra("userName");
-        double orderPrice = reciverdOrderIntent.getDoubleExtra("orderPrice", 0);
+        double price = reciverdOrderIntent.getDoubleExtra("price", 0);
+        String orderPrice = reciverdOrderIntent.getStringExtra("orderPrice");
         int quantity = reciverdOrderIntent.getIntExtra("quantity", 0);
         String goodsName = reciverdOrderIntent.getStringExtra("goodsName");
         TextView orderTextView = findViewById(R.id.orderUserName);
 
-        orderTextView.setText(userName + "\n" + goodsName + "\n" + quantity + "\n" + orderPrice);
+        orderTextView.setText(userName + "\n" + goodsName + "\n" + quantity + "\n" + price + "\n" + orderPrice);
     }
 }

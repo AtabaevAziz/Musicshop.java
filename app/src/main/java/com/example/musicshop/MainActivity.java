@@ -114,13 +114,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         order.userName = userNameTextView.getText().toString();
         order.quantity = quantity;
         order.goodsName = goodsName;
+        order.price = price;
         order.orderPrice = quantity * price;
         //Log.d("order", "" + order.orderPrice);
         Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
         orderIntent.putExtra("userName",order.userName);
         orderIntent.putExtra("quantity",order.quantity);
         orderIntent.putExtra("goodsName",order.goodsName);
-        orderIntent.putExtra("orderPrice",order.orderPrice);
+        orderIntent.putExtra("price",order.price);
+        orderIntent.putExtra("orderPrice",String.format("%.2f", order.orderPrice) + " $");
 
         startActivity(orderIntent);
     }
